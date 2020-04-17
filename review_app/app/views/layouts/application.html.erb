@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VerdictLabs</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-1 ">
+      </div>
+      <div class="col-10 justify-content-center">
+        <div>
+          <br/>
+          <%= image_tag("header2.png", class: "img-fluid")%>
+          <br/>
+          <br/>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <%= image_tag("logo.png", class: "logoclass")%>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select your page
+                  </a>
+                  <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="home.html">Home</a>
+                    <a class="dropdown-item" href="about.html">About Us</a>
+                    <a class="dropdown-item" href="contact.html">Contact Us</a>
+                    <a class="dropdown-item" href="products.html">Product Reviews</a>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </nav>
+        <div class="col-1 ">
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+    <hr>
+    <footer class="page-footer font-small blue pt-4">
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-6 mt-md-0 mt-3">
+          <h5 class="text-uppercase">Stay Connected - Social Media</h5>
+          <div class="d-inline-flex p-2">
+          <%= image_tag("facebook.png", class: "socmedimg")%>
+          <%= image_tag("twitter.jpg", class: "socmedimg")%>
+          <%= image_tag("instagram.jpg", class: "socmedimg")%>
+          <%= image_tag("pinterest.png", class: "socmedimg")%>
+          <%= image_tag("googleplus.png", class: "socmedimg")%>
+          </div>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-1 mb-md-0 mb-1">
+        </div>
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="home.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="product.html">Products</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-3">
+      © 2020 Copyright VerdictLabs Inc
+    </div>
+  </footer>
+  
+  </body>
+
+</html>

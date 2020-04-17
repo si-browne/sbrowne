@@ -1,0 +1,286 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @font-face {
+    font-family: aah;
+    src: url('fonts/Aaargh.ttf') format('truetype');
+    /*https://www.fontsquirrel.com/fonts/aaargh*/
+  }
+  @font-face {
+    font-family: CaviarDreams;
+    src: url('fonts/CaviarDreams.ttf') format('truetype');
+    /*https://www.fontsquirrel.com/fonts/CaviarDreams*/
+  }
+  @font-face {
+    font-family: UpperEastSide;
+    src: url('fonts/UpperEastSide.ttf') format('truetype');
+    /*https://www.fontsquirrel.com/fonts/UpperEastSide*/
+  }
+  
+  @keyframes texty {
+      0%   {text-shadow: 0px 0px 10px #FFFFFF;}
+      25%  {text-shadow: 0px 0px 10px #000000;}
+      50%  {text-shadow: 0px 0px 10px #000000;}
+      100% {text-shadow: 0px 0px 10px #FFFFFF;}
+  }
+  
+  h1{
+      font-family:  UpperEastSide, sans-serif;
+      font-weight: 900;
+      font-size: 130px;
+      text-align: center;
+      color: black;
+      animation-name: texty;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+         -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  
+  #firstpg{
+      width: 100%;
+      height: 100%;
+  }
+  
+  .customhead {
+    font-family: "Roboto";
+  }
+  
+  .socmedimg{
+      width:40px;
+      height:40px;
+  }
+  
+  .logoclass{
+      width:120px;
+      height:40px;
+  }
+  
+  h2, h3, h4, h5, h6{
+      font-family: CaviarDreams, sans-serif;
+      font-weight: 800;
+      color: black;
+      -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  /* Navbar colourisation */
+  ul,li{
+      font-family: CaviarDreams;
+      font-weight: 800;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  .top-bar ul {
+      background-color: #EAE6DA;
+  }
+  .top-bar-right{
+      background-color: #EAE6DA;
+  }
+  .top-bar-left{
+      background-color: #EAE6DA;
+  }
+  /*aka article background colurisation*/
+  .callout{
+      background: #EAE6DA;
+  }
+  
+  @mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+  
+  .box { @include transform(rotate(30deg)); }
+  
+  p{
+      font-family: aah;
+      font-weight: 600;
+      font-size: 15px !important;
+      color: black;
+      text-align: justify;
+      -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  .biggerlink{
+  
+      font-size: 28px !important;
+  }
+  a:link {
+      color:#0645AD;
+      font-family: CaviarDreams;
+      font-weight: 800;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  a:visited{
+      color:#0B0080;
+      font-family: CaviarDreams;
+      font-weight: 800;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  a:hover{
+      color:green;
+      font-family: CaviarDreams;
+      font-weight: 800;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  a:active{
+      color:#0000FF;
+      font-family: CaviarDreams;
+      font-weight: 800;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+  hr {
+      border-top: 1px solid #000000;
+  }
+  .orbit-next{
+      background-color: #324662;
+      opacity: 0.8;
+  }
+  .orbit-previous{
+      background-color: #324662;
+      opacity: 0.8;
+  }
+  
+  body {
+      /* gradient modulation*/
+      background: linear-gradient(to left, #98BB98 0%, #dcdcdc 15%, #dcdcdc 85%, #98BB98 100%);
+      background-attachment:fixed;
+  }
+  
+  #footertext{
+      font-size: 12px !important;
+      color: black !important;
+  }
+  .menu-text{
+      font-family: aah;
+      font-weight: 600;
+      color: #282828;
+  }
+  
+  
+  .shadow_text{
+      text-shadow: 1px 1px #000000;
+  }
+  
+  .left_align{
+      float:left;
+  }
+  
+  .dropbtn {
+      background-color: purple;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+  }
+  
+  .card{
+      border-style: outset ;
+      border-width:2px;
+      border-color: #BBBBBB ;
+      padding:10px;
+  }
+  
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+  
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+  .MyVideos{
+      padding: 5px;
+      background-color: #000000;
+      align-content: center;
+  }
+  
+  #map {
+      height: 400px;  /* The height is 400 pixels */
+      width: 100%;  /* The width is the width of the web page */
+  }
+  
+  .btn_submit{
+      width:30%;
+      height:40px;
+      background-color: #78bc5c;
+      margin:auto;
+      font-weight: bold;
+      font-family:  aah, sans-serif;
+  }
+  
+  .resp-iframe {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      border: 0;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
