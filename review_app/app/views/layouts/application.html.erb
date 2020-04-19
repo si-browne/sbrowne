@@ -30,13 +30,15 @@
                     Select your page
                   </a>
                   <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="home.html">Home</a>
-                    <a class="dropdown-item" href="about.html">About Us</a>
-                    <a class="dropdown-item" href="contact.html">Contact Us</a>
-                    <a class="dropdown-item" href="products.html">Product Reviews</a>
+                    <a class="dropdown-item" href="#"> <%= link_to "Home", root_path %> </a>
+                    <a class="dropdown-item" href="#"> <%= link_to "About Us", static_pages_about_path %> </a>
+                    <a class="dropdown-item" href="#"> <%= link_to "Contact Us", static_pages_contact_path %> </a>
+                    <a class="dropdown-item" href="#"> <%= link_to "Products List", products_path %> </a>
+                    <a class="dropdown-item" href="#"> <%= link_to "Register New Product", new_product_path %> </a>
                   </div>
                 </li>
               </ul>
+              <a class="dropdown-item" href="#"> <%= link_to "Register", new_user_path %> </a>
           </div>
         </nav>
         <div class="col-1 ">
@@ -65,16 +67,16 @@
           <h5 class="text-uppercase">Links</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="home.html">Home</a>
+            <a class="p-2 text-dark" href="#"> <%= link_to "Home", root_path %> </a>
             </li>
             <li>
-              <a href="about.html">About Us</a>
+            <a class="p-2 text-dark" href="#"> <%= link_to "About Us", static_pages_about_path %> </a>
             </li>
             <li>
-              <a href="contact.html">Contact Us</a>
+              <a class="p-2 text-dark" href="#"> <%= link_to "Contact Us", static_pages_contact_path %> </a>
             </li>
             <li>
-              <a href="product.html">Products</a>
+            <a class="p-2 text-dark" href="#"> <%= link_to "Products List", products_path %> </a>
             </li>
           </ul>
         </div>

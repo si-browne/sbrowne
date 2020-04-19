@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   # defined resources
   resources :products, :reviews, :profiles, :users
+  
 end

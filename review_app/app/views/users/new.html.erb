@@ -1,10 +1,46 @@
 <div class="container">
-    <h2>Register User Account</h2>
+    <hr>
+    <h2 class="text-center">Register User Account</h2>
+    <hr>
 
-    <p>register form (upon registration redirect to blank profile)</p>
 
-    <p>username</p>
-    <p>email</p>
-    <p>password</p>
-    <p>submit</p>
+
+
+    <%= form_for @user do |f| %>
+
+    <div class="field" style="100%">
+        <% if @user.errors.any? %>
+    <div id="error_explanation">
+    <h2>
+    <%= pluralize(@user.errors.count, "error") %>
+    prohibted this from being saved:
+    </h2>
+
+    <p>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+    <li>
+    <%= msg %>
+    </li>
+    </ul>
+    <% end %>
+    </p>
+
+    <% if alert %>
+    <%= alert %>
+    <% end %>
+
+    </div>
+    <% end %>
+        <div class="card">
+        <%= f.text_field :username, placeholder: 'Enter a Username', class: 'form-control' %><br><br>
+        <%= f.email_field :email, placeholder: 'Enter your Email', class: 'form-control' %><br><br>
+        <%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %><br><br>
+        <%= f.password_field :password_confirmation, placeholder: 'Confirm your Password', class: 'form-control' %><br><br>
+        <%= f.file_field :userphoto %><br><br>
+        <%= f.submit 'Create Account' %>
+        <% end %>
+        </div>
+    </div>
+
 </div>
