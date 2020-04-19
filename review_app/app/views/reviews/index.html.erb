@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1 ">
+        </div>
+        <div class="col-10 justify-content-center">
+            <hr>
+                <h2>Product Reviews</h2>
+            <hr>
+            <div>
+            <table border="1" class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Author</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Display Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @reviews.each do |review| %>
+                    <tr>
+                        <th><%= review.author%></th>
+                        <th><%= review.product.brand%></th>
+                        <th><%= review.rating%></th>
+                        <th><%= review.date%></th>
+                        <th><%= link_to 'Show', review_path(review) %></th>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div class="col-1">
+        </div>
+    </div>
+</div>

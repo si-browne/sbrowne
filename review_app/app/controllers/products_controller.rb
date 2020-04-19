@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
     def index
         @products=Product.all
+        @reviews=Review.all
     end
 
     def new
@@ -12,16 +13,17 @@ class ProductsController < ApplicationController
     def create
         @product=Product.new(product_params)
         if @product.save
-            redirect_to products_path, notice:
+            redirect_to product_path, notice:
             "Thank you for your product upload."
         else
             render 'new'
         end
     end
 
-    def show 
+    def show
         @product=Product.find(params[:id])
-        @review=Review.find(params[:id])
+        @users=User.find(params[:id])
+        @reviews=Review.where(product_id: params[:id])
     end
 
     private

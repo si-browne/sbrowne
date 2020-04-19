@@ -3,28 +3,18 @@
         <div class="col-1 ">
         </div>
         <div class="col-10 justify-content-center">
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
-                    <div class="col-md-6 mt-md-0 mt-3">
+            <div class="container-fluid text-center text-md-left">
+                <div class="row">
+                    <div class="col-md-12 mt-md-0 mt-3 text-center">
                     <br>
                     <br>
-                    <p>View Review</p>
-                    </div>
-                    <div class="col-md-6 mt-md-0 mt-3">
-                    <br>
-                    <br>
-                    <p>Author Name </p>
-                    <br>
-                    <br>
-                    <p>Product Rating</p>
-                    <br>
-                    <br>
-                    <p>Review Text</p>
-                    <br>
-                    <br>
-                    <p>Review Date</p>
-                    <br>
-                    <br>
+                    <hr>
+                    <p>Product: <%= @review.product.brand%></p> <br>
+                    <p>Author: <%=  @review.author %></p><br>
+                    <p>Rating: <%=  @review.rating %></p><br>
+                    <p>Date: <%=  @review.date %></p><br>
+                    <p>Review: <%=  @review.reviewcontent %></p>
+                    <%= link_to "< Back to Reviews", reviews_path, class:'btn btn-success' %>
                     </div>
                 </div>
             </div>

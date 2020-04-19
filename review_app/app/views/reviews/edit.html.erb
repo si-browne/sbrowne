@@ -1,36 +1,39 @@
 <div class="container">
-    <div class="row">
-        <div class="col-1 ">
-        </div>
-        <div class="col-10 justify-content-center">
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
-                    <div class="col-md-6 mt-md-0 mt-3">
-                    <br>
-                    <br>
-                    <p>Update Review</p>
-                    </div>
-                    <div class="col-md-6 mt-md-0 mt-3">
-                    <br>
-                    <br>
-                    <p>Author Name </p>
-                    <br>
-                    <br>
-                    <p>Product Rating</p>
-                    <br>
-                    <br>
-                    <p>Review Text</p>
-                    <br>
-                    <br>
-                    <p>Review Date</p>
-                    <br>
-                    <br>
-                    <p>Submit</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-1">
-        </div>
+<hr>
+<h2 class="text-center">Update Review</h2>
+<hr>
+    <%= form_for @review do |f| %>
+    <div class="col-12 justify-content-center card">
+        <%= f.label :Update_Product %>
+        <%= f.select :product_id, Product.all.collect {|x| [x.brand, x.id]}, {:include_blank => 'Select Product'}, class: 'form-control'%><br><br>
+
+        <%= f.label :Update_User %>
+        <%= f.select :user_id, User.all.collect {|x| [x.username, x.id]}, {:include_blank => 'Select User'}, class: 'form-control'%><br><br>
+
+        <%= f.label :Update_Author %>
+        <%= f.text_field :author, placeholder: 'Update Author name', class: 'form-control' %><br><br>
+
+        <%= f.label :Update_Rating %>
+        <%= f.number_field :rating, placeholder: 'Update rating (out of 5)', class: 'form-control' %><br><br>
+
+        <%= f.label :Upload_New_Photo %>
+        <%= f.text_area :reviewcontent, placeholder: 'Update your review', class: 'form-control' %><br><br>
+        
+        <%= f.label :Upload_New_Photo %>
+        <%= f.date_field :date, placeholder: 'Update review date', class: 'form-control' %><br><br>
+
+        <%= f.submit 'Update Review', class:'btn btn-success' %><br><br>
+        <%= link_to "Cancel", review_path, class:'btn btn-danger' %>
+
+        <% end %>
     </div>
 </div>
+
+
+        
+        
+        
+        
+        
+        
+        

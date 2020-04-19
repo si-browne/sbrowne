@@ -11,6 +11,7 @@
                 <div class="col-md-6 mt-md-0 mt-3">
                     <br>
                     <br>
+
                     <%= image_tag(@product.productphoto.url, class: "img-fluid") %>
                 </div>
                 <div class="col-md-6 mt-md-0 mt-3">
@@ -38,21 +39,30 @@
 
         <div class="col-10 justify-content-center">
         <hr>
-        <h2 class="text-center">Reviews</h2>
+        <h2 class="text-center">Product Reviews</h2>
         <hr>
         <div class="row">
-                <div class="col-md-12 mt-md-0 mt-3">
-
-                    <br>
-                    <br>
-                    <p>Reviews</p>
+        <hr><% @reviews.each do |review| %>
+            <div class="col-md-12 mt-md-0 mt-3">
+            <ul class="list-group">
+            <li class="list-group-item d-inline-flex">
+            <div class="col-md-3 mt-md-0 mt-3">
+                <%= image_tag(review.user.userphoto.url, class: "img-fluid") %>
                 </div>
+            <div class="col-md-9 mt-md-0 mt-3">
+                <p>Author: <%=  review.author %></p><br>
+                <p>Rating: <%=  review.rating %></p><br>
+                <p>Date: <%=  review.date %></p><br>
+                <p>Review: <%=  review.reviewcontent %></p>
+                </div>
+                </li>
+                <hr>
+            </ul>
             </div>
-        </div>
-
+            <% end %>
         <div class="col-1">
         </div>
-
+        <hr>
     </div>
-
+    </div>
 </div>

@@ -1,36 +1,44 @@
 <div class="container">
-    <div class="row">
-        <div class="col-1 ">
-        </div>
-        <div class="col-10 justify-content-center">
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
-                    <div class="col-md-6 mt-md-0 mt-3">
-                    <br>
-                    <br>
-                    <p>Create Review</p>
-                    </div>
-                    <div class="col-md-6 mt-md-0 mt-3">
-                    <br>
-                    <br>
-                    <p>Author Name </p>
-                    <br>
-                    <br>
-                    <p>Product Rating</p>
-                    <br>
-                    <br>
-                    <p>Review Text</p>
-                    <br>
-                    <br>
-                    <p>Review Date</p>
-                    <br>
-                    <br>
-                    <p>Submit</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-1">
+    <hr>
+    <h2 class="text-center">Create Review</h2>
+    <hr>
+
+    <%= form_for @review do |f| %>
+
+    <div class="field" style="100%">
+        <% if @review.errors.any? %>
+    <div id="error_explanation">
+    <h2>
+    <%= pluralize(@review.errors.count, "error") %>
+    prohibted this from being saved:
+    </h2>
+
+    <p>
+    <ul>
+    <% @review.errors.full_messages.each do |msg| %>
+    <li>
+    <%= msg %>
+    </li>
+    </ul>
+    <% end %>
+    </p>
+
+    <% if alert %>
+    <%= alert %>
+    <% end %>
+
+    </div>
+    <% end %>
+        <div class="card">
+        <%= f.select :product_id, Product.all.collect {|x| [x.brand, x.id]}, {:include_blank => 'Select Product'}, class: 'form-control'%><br><br>
+        <%= f.select :user_id, User.all.collect {|x| [x.username, x.id]}, {:include_blank => 'Select User'}, class: 'form-control'%><br><br>
+        <%= f.text_field :author, placeholder: 'Enter Author name', class: 'form-control' %><br><br>
+        <%= f.number_field :rating, placeholder: 'Enter your rating (out of 5)', class: 'form-control' %><br><br>
+        <%= f.text_area :reviewcontent, placeholder: 'Enter your review', class: 'form-control' %><br><br>
+        <%= f.date_field :date, placeholder: 'Enter review date', class: 'form-control' %><br><br>
+        <%= f.submit 'Submit Review' %>
+        <% end %>
         </div>
     </div>
+
 </div>
