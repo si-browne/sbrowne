@@ -23217,3 +23217,251 @@ Processing by ReviewsController#new as HTML
 Completed 200 OK in 79ms (Views: 70.2ms | ActiveRecord: 8.1ms | Allocations: 11603)
 
 
+Started GET "/" for ::1 at 2020-04-19 14:02:29 +0100
+  [1m[35m (2.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 82.4ms | Allocations: 7722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 194ms (Views: 161.7ms | ActiveRecord: 0.0ms | Allocations: 17729)
+
+
+Started GET "/products" for ::1 at 2020-04-19 14:02:35 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:21
+  Rendered products/index.html.erb within layouts/application (Duration: 43.8ms | Allocations: 8188)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 126ms (Views: 85.4ms | ActiveRecord: 1.4ms | Allocations: 19771)
+
+
+Started GET "/products" for ::1 at 2020-04-19 14:02:37 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:21
+  Rendered products/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.1ms | Allocations: 8419)
+
+
+Started GET "/products" for ::1 at 2020-04-19 14:02:43 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:21
+  Rendered products/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.1ms | Allocations: 8402)
+
+
+Started GET "/products" for ::1 at 2020-04-19 14:03:59 +0100
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:21
+  Rendered products/index.html.erb within layouts/application (Duration: 35.3ms | Allocations: 8314)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 180ms (Views: 117.3ms | ActiveRecord: 4.6ms | Allocations: 28790)
+
+
+Started GET "/products/search" for ::1 at 2020-04-19 14:04:02 +0100
+Processing by ProductsController#search as HTML
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (6.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/search.html.erb:32
+  Rendered products/search.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1237)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 40.6ms | ActiveRecord: 6.4ms | Allocations: 8979)
+
+
+Started GET "/products/search?term=Apple&commit=Search" for ::1 at 2020-04-19 14:04:09 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (6.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple')[0m
+  ↳ app/views/products/search.html.erb:32
+  Rendered products/search.html.erb within layouts/application (Duration: 12.4ms | Allocations: 782)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 100.6ms | ActiveRecord: 6.6ms | Allocations: 8430)
+
+
+Started GET "/products/search?term=Apple+iPhone+6&commit=Search" for ::1 at 2020-04-19 14:04:19 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple iPhone 6", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple iPhone 6')[0m
+  ↳ app/views/products/search.html.erb:32
+  Rendered products/search.html.erb within layouts/application (Duration: 4.4ms | Allocations: 809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.5ms | Allocations: 8457)
+
+
+Started GET "/products/search?term=Apple+iPhone+6&commit=Search" for ::1 at 2020-04-19 14:05:09 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple iPhone 6", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (3.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple iPhone 6')[0m
+  ↳ app/views/products/search.html.erb:34
+  Rendered products/search.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 3.0ms | Allocations: 10247)
+
+
+Started GET "/products/search?term=Apple+iPhone+6&commit=Search" for ::1 at 2020-04-19 14:05:21 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple iPhone 6", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple iPhone 6')[0m
+  ↳ app/views/products/search.html.erb:34
+  Rendered products/search.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.1ms | Allocations: 10237)
+
+
+Started GET "/products/search?term=Apple+iPhone+6&commit=Search" for ::1 at 2020-04-19 14:05:30 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple iPhone 6", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple iPhone 6')[0m
+  ↳ app/views/products/search.html.erb:34
+  Rendered products/search.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 4.4ms | Allocations: 10215)
+
+
+Started GET "/products/search?term=&commit=Search" for ::1 at 2020-04-19 14:05:35 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = '')[0m
+  ↳ app/views/products/search.html.erb:34
+  Rendered products/search.html.erb within layouts/application (Duration: 3.8ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 1.5ms | Allocations: 8395)
+
+
+Started GET "/products/search?term=Apple+iPhone+6&commit=Search" for ::1 at 2020-04-19 14:05:40 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple iPhone 6", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple iPhone 6')[0m
+  ↳ app/views/products/search.html.erb:34
+  Rendered products/search.html.erb within layouts/application (Duration: 6.6ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.1ms | Allocations: 8423)
+
+
+Started GET "/products/search?term=Apple+iPhone+6&commit=Search" for ::1 at 2020-04-19 14:06:34 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple iPhone 6", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (4.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple iPhone 6')[0m
+  ↳ app/views/products/search.html.erb:34
+  Rendered products/search.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 81.8ms | ActiveRecord: 4.8ms | Allocations: 10291)
+
+
+Started GET "/products/search" for ::1 at 2020-04-19 14:06:35 +0100
+Processing by ProductsController#search as HTML
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/search.html.erb:34
+  Rendered products/search.html.erb within layouts/application (Duration: 2.6ms | Allocations: 919)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.1ms | Allocations: 8534)
+
+
+Started GET "/products/search" for ::1 at 2020-04-19 14:07:16 +0100
+Processing by ProductsController#search as HTML
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/search.html.erb:35
+  Rendered products/search.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.1ms | Allocations: 10413)
+
+
+Started GET "/products/search" for ::1 at 2020-04-19 14:07:36 +0100
+Processing by ProductsController#search as HTML
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (3.2ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/search.html.erb:35
+  Rendered products/search.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 3.2ms | Allocations: 10371)
+
+
+Started GET "/products" for ::1 at 2020-04-19 14:07:39 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:21
+  Rendered products/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.7ms | Allocations: 8760)
+
+
+Started GET "/products/search" for ::1 at 2020-04-19 14:07:41 +0100
+Processing by ProductsController#search as HTML
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/search.html.erb:35
+  Rendered products/search.html.erb within layouts/application (Duration: 2.6ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.1ms | Allocations: 8518)
+
+
+Started GET "/products/search" for ::1 at 2020-04-19 14:08:03 +0100
+Processing by ProductsController#search as HTML
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/search.html.erb:35
+  Rendered products/search.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1281)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 51.0ms | ActiveRecord: 4.4ms | Allocations: 10360)
+
+
+Started GET "/products/search?term=Apple+iPad&commit=Search" for ::1 at 2020-04-19 14:08:21 +0100
+Processing by ProductsController#search as HTML
+  Parameters: {"term"=>"Apple iPad", "commit"=>"Search"}
+  Rendering products/search.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE (brand = 'Apple iPad')[0m
+  ↳ app/views/products/search.html.erb:35
+  Rendered products/search.html.erb within layouts/application (Duration: 5.2ms | Allocations: 844)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.3ms | Allocations: 8470)
+
+
+Started GET "/products/2" for ::1 at 2020-04-19 14:08:23 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (4.3ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:24:in `show'
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:25:in `show'
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`product_id` = 2[0m
+  ↳ app/views/products/show.html.erb:42
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/products/show.html.erb:47
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/products/show.html.erb:47
+  Rendered products/show.html.erb within layouts/application (Duration: 65.3ms | Allocations: 9043)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 216ms (Views: 101.9ms | ActiveRecord: 35.6ms | Allocations: 27552)
+
+
+Started GET "/" for ::1 at 2020-04-19 14:08:33 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 10.5ms | Allocations: 719)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms | Allocations: 8755)
+
+

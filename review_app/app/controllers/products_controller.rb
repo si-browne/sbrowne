@@ -26,6 +26,14 @@ class ProductsController < ApplicationController
         @reviews=Review.where(product_id: params[:id])
     end
 
+    def search
+        @products = if params[:term]
+            Product.where(["brand = ?", "#{params[:term]}"])
+        else
+            Product.all
+        end
+    end
+
     private
     def product_params
         params.require(:product).permit(:user_id, :brand, :avgcost, :category, :releasedate, :description, :productphoto)

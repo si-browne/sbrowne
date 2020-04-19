@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   get 'static_pages/contact'
   # defined resources
-  resources :products, :reviews, :profiles, :users, :sessions
+  resources :reviews, :profiles, :users, :sessions
+  resources :products do
+    collection do
+      get :search
+    end
+  end
+  
   
 end
