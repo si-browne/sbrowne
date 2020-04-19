@@ -2,56 +2,57 @@
     <div class="row">
         <div class="col-1 ">
         </div>
+
         <div class="col-10 justify-content-center">
-            <div>
-            <hr>
-            <Marquee><h2>Product Details</h2></Marquee>
-            <hr>
-            <p>Product Name: asdasd</p>
-            <br>
-            <br>
-            <p>Product Brand: asdasd</p>
-            <br>
-            <br>
-            <p>Average Cost: 97287</p>
-            <br>
-            <br>
-            <p>category</p>
-            <br>
-            <br>
-            <p>Date</p>
-            <br>
-            <br>
-            <p>Upload Photo feature</p>
-            <br>
-            <br>
-            <p>Create Review Link</p>
-            </div>
-            <div>
-            <hr>
-            <h5>Product Reviews (iframe?)</h5>
-            <hr>
-            <p>Profile image</p>
-            <br>
-            <br>
-            <p>Review Author Name.</p>
-            <br>
-            <br>
-            <p>Review Rating.</p>
-            <br>
-            <br>
-            <p>Review text.</p>
-            <br>
-            <br>
-            <p>Review Fate.</p>
-            <br>
-            <br>
-            <p>View Review Link</p>|
-            <p>Edit Review Link</p>|
-            <p>Delete Review Link</p>
+        <hr>
+        <h2 class="text-center">Product</h2>
+        <hr>
+        <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <br>
+                    <br>
+                    <%= image_tag(@product.productphoto.url, class: "img-fluid") %>
+                </div>
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <br>
+                    <br>
+                    <p>Brand Name: <%=  @product.brand %></p><br>
+                    <p>Average Cost: £<%=  @product.avgcost %></p><br>
+                    <p>Category: <%=  @product.category %></p><br>
+                    <p>Release Date: <%=  @product.releasedate %></p><br>
+                    <p>Description: <%=  @product.description %></p><br>
+                    <a href="#"> <%= link_to "Return to List", products_path %> </a><br><br>
+                    <a href="#"> <%= link_to "Add Review", new_review_path %> </a><br><br>
+                </div>
             </div>
         </div>
+
         <div class="col-1">
         </div>
+
     </div>
+
+    <div class="row">
+        <div class="col-1 ">
+        </div>
+
+        <div class="col-10 justify-content-center">
+        <hr>
+        <h2 class="text-center">Reviews</h2>
+        <hr>
+        <div class="row">
+                <div class="col-md-12 mt-md-0 mt-3">
+
+                    <br>
+                    <br>
+                    <p>Reviews</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1">
+        </div>
+
+    </div>
+
 </div>

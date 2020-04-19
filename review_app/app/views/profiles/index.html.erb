@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1 ">
+        </div>
+        <div class="col-10 justify-content-center">
+            <div>
+            <hr>
+            <h2>Profiles List</h2>
+            <hr>
+            <table border="1" class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Profile Name</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Town/City</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Profile Page</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @profiles.each do |profile| %>
+                    <tr>
+                        <th scope="row"> <%= profile.fullname%> </th>
+                        <th><%= profile.dob%></th>
+                        <th><%= profile.address%></th>
+                        <th><%= profile.citytown%></th>
+                        <th><%= profile.country%></th>
+                        <th><%= link_to 'Show', profile_path(profile) %></th>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div class="col-1">
+        </div>
+    </div>
+</div>

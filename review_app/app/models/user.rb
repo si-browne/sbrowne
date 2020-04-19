@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  #has_one_attached :userphoto
   has_attached_file :userphoto
   has_secure_password
   validates_uniqueness_of :email

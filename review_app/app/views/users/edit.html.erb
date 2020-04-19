@@ -1,9 +1,27 @@
 <div class="container">
-    <h2>Reset Password</h2>
+<hr>
+<h2 class="text-center">Update Account</h2>
+<hr>
+    <%= form_for @user do |f| %>
+    <div class="col-12 justify-content-center card">
+        <%= f.label :Update_Username %>
+        <%= f.text_field :username, placeholder: 'Enter your name', class: 'form-control' %><br><br>
 
-    <p>Password Reset form</p>
+        <%= f.label :Update_Email %>
+        <%= f.email_field :email, placeholder: 'Enter your new Email', class: 'form-control' %><br><br>
 
-    <p>old password</p>
-    <p>new password</p>
-    <p>submit</p>
+        <%= f.label :Update_Password %>
+        <%= f.password_field :password, placeholder: 'Enter a new Password', class: 'form-control' %><br><br>
+
+        <%= f.label :Update_Password_Confirmation %>
+        <%= f.password_field :password_confirmation, placeholder: 'Confirm your new Password', class: 'form-control' %><br><br>
+
+        <%= f.label :Upload_New_Photo %>
+        <%= f.file_field :userphoto %><br><br>
+        
+        <%= f.submit 'Update Account', class:'btn btn-success' %><br><br>
+        <%= link_to "Cancel", user_path, class:'btn btn-danger' %>
+
+        <% end %>
+    </div>
 </div>

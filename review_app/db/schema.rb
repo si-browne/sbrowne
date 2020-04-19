@@ -34,17 +34,12 @@ ActiveRecord::Schema.define(version: 2020_04_18_110529) do
     t.string "address"
     t.string "citytown"
     t.string "country"
-    t.string "profilephoto_file_name"
-    t.string "profilephoto_content_type"
-    t.integer "profilephoto_file_size"
-    t.datetime "profilephoto_updated_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "profile_id"
     t.integer "product_id"
     t.string "author"
     t.integer "rating"

@@ -10,27 +10,23 @@
             <table border="1" class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Product Name</th>
                         <th scope="col">Brand/Manufacturer</th>
                         <th scope="col">Average Cost</th>
                         <th scope="col">Category</th>
                         <th scope="col">Release Date</th>
-                        <th scope="col">Description</th>
                         <th scope="col">Product Page</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <% @products.each do |product| %>
                     <tr>
-                        <th scope="row">(filler text) Photo</th>
-                        <th>(filler text) Apple iPhone 6</th>
-                        <th>(filler text) Apple</th>
-                        <th>(filler text) $400</th>
-                        <th>(filler text) Smartphones</th>
-                        <th>(filler text) 11/1/19</th>
-                        <th>(filler text) Description</th>
-                        <th>(filler text) URL</th>
+                        <th><%= product.brand%></th>
+                        <th><%= product.avgcost%></th>
+                        <th><%= product.category%></th>
+                        <th><%= product.releasedate%></th>
+                        <th><%= link_to 'Show', product_path(product) %></th>
                     </tr>
+                    <% end %>
                 </tbody>
             </table>
             </div>

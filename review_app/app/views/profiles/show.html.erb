@@ -5,24 +5,30 @@
         <div class="col-10 justify-content-center">
             <div class="container-fluid text-center text-md-left">
                 <div class="row">
-                                    <br>
+                    <br>
                     <br>
                     <div class="col-md-6 mt-md-0 mt-3">
                     <br>
                     <br>
-                    <%= image_tag(@profile.profilephoto.url, class: "img-fluid") %>
+                    <%= image_tag(@user.userphoto.url, class: "img-fluid") %>
                     </div>
-
                     <div class="col-md-6 mt-md-0 mt-3">
                     <br>
                     <br>
-                    <p>Full Name: <%=  @profile.fullname %></p><br><br>
-                    <p>DOB: <%=  @profile.dob %></p><br><br>
-                    <p>Address: <%=  @profile.address %></p><br><br>
-                    <p>Town: <%=  @profile.citytown %></p><br><br>
-                    <p>Country: <%=  @profile.country %></p><br><br>
-                    <a href="#"> <%= link_to "Update Profile", edit_profile_path %> </a>
-
+                    <p>Username: <%=  @user.username %></p><br>
+                    <p>Email: <%=  @user.email %></p><br>
+                    <a href="#"> <%= link_to "Update Profile Picture", user_path %> </a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Full Name: <%=  @profile.fullname %></p><br>
+                    <p>DOB: <%=  @profile.dob %></p><br>
+                    <p>Address: <%=  @profile.address %></p><br>
+                    <p>Town: <%=  @profile.citytown %></p><br>
+                    <p>Country: <%=  @profile.country %></p><br>
+                    <a href="#"> <%= link_to "Update Profile", edit_profile_path %> </a><br><br>
                     </div>
                 </div>
             </div>

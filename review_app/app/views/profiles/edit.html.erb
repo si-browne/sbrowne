@@ -4,11 +4,6 @@
 <hr>
     <%= form_for @profile do |f| %>
     <div class="col-12 justify-content-center card">
-        <br>
-        <br>
-        <p>Update Your Photo</p><br>
-        <%= f.file_field :profilephoto %><br>
-        <hr>
         <%= f.label :Name %><br>
         <%= f.text_field :fullname, placeholder: 'Enter your name', class: 'form-control' %><br><br>
 
@@ -23,8 +18,9 @@
 
         <%= f.label :Country %><br>
         <%= f.text_field :country, placeholder: 'Enter your Country', class: 'form-control' %><br><br>
-        
-        <%= f.submit 'Update Profile' %>
+
+        <%= f.submit 'Update Profile', class:'btn btn-success' %><br><br>
+        <%= link_to "Cancel", profile_path, class:'btn btn-danger' %>
 
         <% end %>
         </div>

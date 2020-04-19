@@ -7,7 +7,6 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
       t.string :address
       t.string :citytown
       t.string :country
-      t.attachment :profilephoto
 
       t.timestamps
     end

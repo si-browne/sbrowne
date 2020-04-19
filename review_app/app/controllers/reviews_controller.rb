@@ -3,7 +3,6 @@ class ReviewsController < ApplicationController
         @product=Product.new
         @user=User.new
         @review=Review.new
-        @profile=Profile.new
     end
 
     def create

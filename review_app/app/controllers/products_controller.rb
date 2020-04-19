@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+    def index
+        @products=Product.all
+    end
+
     def new
         @product=Product.new
         @user=User.new
@@ -8,7 +12,7 @@ class ProductsController < ApplicationController
     def create
         @product=Product.new(product_params)
         if @product.save
-            redirect_to product_path, notice:
+            redirect_to products_path, notice:
             "Thank you for your product upload."
         else
             render 'new'
@@ -17,11 +21,12 @@ class ProductsController < ApplicationController
 
     def show 
         @product=Product.find(params[:id])
+        @review=Review.find(params[:id])
     end
 
     private
     def product_params
-        params.require(:product).permit(:brand, :avgcost, :category, :releasedate, :description)
+        params.require(:product).permit(:user_id, :brand, :avgcost, :category, :releasedate, :description, :productphoto)
     end
 
 end
