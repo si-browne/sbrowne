@@ -2,12 +2,7 @@
     <hr>
     <h2 class="text-center">Register User Account</h2>
     <hr>
-
-
-
-
     <%= form_for @user do |f| %>
-
     <div class="field" style="100%">
         <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -15,7 +10,6 @@
     <%= pluralize(@user.errors.count, "error") %>
     prohibted this from being saved:
     </h2>
-
     <p>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
@@ -25,11 +19,9 @@
     </ul>
     <% end %>
     </p>
-
     <% if alert %>
     <%= alert %>
     <% end %>
-
     </div>
     <% end %>
         <div class="card">

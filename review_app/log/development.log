@@ -11530,3 +11530,984 @@ Processing by ProfilesController#show as HTML
 Completed 200 OK in 68ms (Views: 56.4ms | ActiveRecord: 3.4ms | Allocations: 8898)
 
 
+Started GET "/" for ::1 at 2020-04-19 04:06:10 +0100
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 167.7ms | Allocations: 7722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 0.0ms | Allocations: 16176)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"profiles"}, missing required keys: [:id]):
+    38:                   </div>
+    39:                 </li>
+    40:               </ul>
+    41:               <a class="dropdown-item" href="#"> <%= link_to "Profile", profile_path %> </a>
+    42:               <a class="dropdown-item" href="#"> <%= link_to "Register", new_user_path %> </a>
+    43:           </div>
+    44:         </nav>
+  
+app/views/layouts/application.html.erb:41
+Started GET "/" for ::1 at 2020-04-19 04:47:25 +0100
+  [1m[35m (11.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 96.0ms | Allocations: 7722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 873ms (ActiveRecord: 0.0ms | Allocations: 140784)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_session_path' for #<#<Class:0x00007f08a4b499f8>:0x00007f08a4b48030>
+Did you mean?  new_user_path):
+    50:               <a class="dropdown-item" href="#"> <%= link_to "Profile", profile_path %> </a>
+    51:               <% else %>
+    52:               <a class="p-2 text-dark" href="#">
+    53:               <%= link_to 'Log in', new_session_path, class: "active_nav_link" %>
+    54:               </a>
+    55:               <% end %>
+    56:           </div>
+  
+app/views/layouts/application.html.erb:53
+Started GET "/" for ::1 at 2020-04-19 04:49:17 +0100
+  [1m[35m (0.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 35.9ms | Allocations: 7722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 85.5ms | ActiveRecord: 0.0ms | Allocations: 17685)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 04:49:20 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 433)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 8601)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 04:49:42 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cWMKBoetucnrnhIKJErIDuDjGqopbwVwORai/S7x0pWDOiTrh2EzfVPbpClh1q8ZJQPILWshWyC6UbELsbGyzA==", "userid"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 4.4ms | Allocations: 7040)
+
+
+  
+NoMethodError (undefined method `find_by_userid' for #<Class:0x00007f09b40f8a38>
+Did you mean?  find_by_sql):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+Started POST "/sessions" for ::1 at 2020-04-19 04:50:48 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cWMKBoetucnrnhIKJErIDuDjGqopbwVwORai/S7x0pWDOiTrh2EzfVPbpClh1q8ZJQPILWshWyC6UbELsbGyzA==", "userid"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.6ms | Allocations: 6293)
+
+
+  
+NoMethodError (undefined method `find_by_userid' for #<Class:0x000055a0918322f0>
+Did you mean?  find_by_sql):
+  
+app/controllers/sessions_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (25.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `verdictlabs_db`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) COLLATE utf8_general_ci NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) COLLATE utf8_general_ci NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2505670687136859690', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProfiles (20200418110211)
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE `profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `fullname` varchar(255), `dob` date, `address` varchar(255), `citytown` varchar(255), `country` varchar(255), `profilephoto_file_name` varchar(255), `profilephoto_content_type` varchar(255), `profilephoto_file_size` int, `profilephoto_updated_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (5.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110211')[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20200418110513)
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `profile_id` int, `product_id` int, `author` varchar(255), `rating` int, `reviewcontent` text, `date` date, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110513')[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20200418110521)
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `username` varchar(255), `email` varchar(255), `password_digest` varchar(255), `userphoto_file_name` varchar(255), `userphoto_content_type` varchar(255), `userphoto_file_size` int, `userphoto_updated_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110521')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProducts (20200418110529)
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE `products` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `brand` varchar(255), `avgcost` float(24), `category` varchar(255), `releasedate` date, `description` text, `productphoto_file_name` varchar(255), `productphoto_content_type` varchar(255), `productphoto_file_size` int, `productphoto_updated_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (7.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110529')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-04-19 03:57:10.443333', '2020-04-19 03:57:10.443333')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2505670687136859690')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2020-04-19 05:02:26 +0100
+  [1m[35m (2.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 23.6ms | Allocations: 7722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 62.6ms | ActiveRecord: 0.0ms | Allocations: 17781)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 05:02:41 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 193ms (Views: 85.8ms | ActiveRecord: 22.6ms | Allocations: 32395)
+
+
+Started POST "/users" for ::1 at 2020-04-19 05:03:10 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"wsYtebn5EGJUDU+ciJpwMJDvc35YA1XGt4B7FafiqBW1tpdn9AVtnjCr1V2e/HdxEyu/Mq2mZjUe6o69CawzQw==", "user"=>{"username"=>"bobadmin", "email"=>"billiejean@jackson.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "userphoto"=>#<ActionDispatch::Http::UploadedFile:0x00007f76b8084f68 @tempfile=#<Tempfile:/tmp/RackMultipart20200419-31235-1x1ehgc.jpg>, @original_filename="profile1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[userphoto]\"; filename=\"profile1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Account"}
+Command :: file -b --mime '/tmp/639719a4d673a7a980c8b41b4960df5120200419-31235-2slqmi.jpg'
+Command :: file -b --mime '/tmp/639719a4d673a7a980c8b41b4960df5120200419-31235-kfwj35.jpg'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in User model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at /home/jbloggs/assignment/sbrowne/review_app/app/controllers/users_controller.rb:10)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'billiejean@jackson.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 648)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 785ms (Views: 36.2ms | ActiveRecord: 2.6ms | Allocations: 15447)
+
+
+  [1m[35m (2.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (15.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `verdictlabs_db`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT @@innodb_file_per_table = 1 AND @@innodb_file_format = 'Barracuda'[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) COLLATE utf8_general_ci NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) COLLATE utf8_general_ci NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2505670687136859690', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProfiles (20200418110211)
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE `profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `fullname` varchar(255), `dob` date, `address` varchar(255), `citytown` varchar(255), `country` varchar(255), `profilephoto_file_name` varchar(255), `profilephoto_content_type` varchar(255), `profilephoto_file_size` int, `profilephoto_updated_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (9.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110211')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20200418110513)
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `profile_id` int, `product_id` int, `author` varchar(255), `rating` int, `reviewcontent` text, `date` date, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110513')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20200418110521)
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `username` varchar(255), `email` varchar(255), `password_digest` varchar(255), `userphoto_file_name` varchar(255), `userphoto_content_type` varchar(255), `userphoto_file_size` int, `userphoto_updated_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110521')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProducts (20200418110529)
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE `products` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` int, `brand` varchar(255), `avgcost` float(24), `category` varchar(255), `releasedate` date, `description` text, `productphoto_file_name` varchar(255), `productphoto_content_type` varchar(255), `productphoto_file_size` int, `productphoto_updated_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200418110529')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-04-19 04:06:07.714412', '2020-04-19 04:06:07.714412')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('2505670687136859690')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users" for ::1 at 2020-04-19 05:08:05 +0100
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-04-19 05:08:13 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 63.3ms | Allocations: 7614)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 104.5ms | ActiveRecord: 0.0ms | Allocations: 17091)
+
+
+Started GET "/users/new" for ::1 at 2020-04-19 05:08:16 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1284)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 176ms (Views: 57.2ms | ActiveRecord: 31.5ms | Allocations: 31941)
+
+
+Started POST "/users" for ::1 at 2020-04-19 05:08:30 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Bx8qR/jx1G7uB+C4JpH+c2rvWrWwQIZZ3rmR3IQfPTZwb5BZtQ2pkoqhenkw9/ky6SuW+UXltap302R0KlGmYA==", "user"=>{"username"=>"bobadmin", "email"=>"billiejean@jackson.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "userphoto"=>#<ActionDispatch::Http::UploadedFile:0x00007fe7a0dcd130 @tempfile=#<Tempfile:/tmp/RackMultipart20200419-31370-11g05e8.jpg>, @original_filename="profile1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[userphoto]\"; filename=\"profile1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Account"}
+Command :: file -b --mime '/tmp/639719a4d673a7a980c8b41b4960df5120200419-31370-5hl0o2.jpg'
+Command :: file -b --mime '/tmp/639719a4d673a7a980c8b41b4960df5120200419-31370-1brujja.jpg'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in User model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at /home/jbloggs/assignment/sbrowne/review_app/app/controllers/users_controller.rb:10)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'billiejean@jackson.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[36mUser Create (5.7ms)[0m  [1m[32mINSERT INTO `users` (`username`, `email`, `password_digest`, `userphoto_file_name`, `userphoto_content_type`, `userphoto_file_size`, `userphoto_updated_at`, `created_at`, `updated_at`) VALUES ('bobadmin', 'billiejean@jackson.com', '$2a$12$cuBSKLZAOPRToyaJ4pmkgO/iRBOPmu9HhG7JnHpV3W7Bk.SgIUC6S', 'profile1.jpg', 'image/jpeg', 208491, '2020-04-19 04:08:31', '2020-04-19 04:08:31.219782', '2020-04-19 04:08:31.219782')[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10:in `create'
+Redirected to http://localhost:3000/profiles/new
+Completed 302 Found in 737ms (ActiveRecord: 7.7ms | Allocations: 7899)
+
+
+Started GET "/profiles/new" for ::1 at 2020-04-19 05:08:31 +0100
+Processing by ProfilesController#new as HTML
+  Rendering profiles/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/profiles/new.html.erb:33:in `collect'
+  Rendered profiles/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 2058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.3ms | Allocations: 10254)
+
+
+Started POST "/profiles" for ::1 at 2020-04-19 05:08:56 +0100
+Processing by ProfilesController#create as HTML
+  Parameters: {"authenticity_token"=>"ubzxFNf/sdzTaNQVfqPyS+qjw0dkZGSV9U14kq9sgoQXqNwpKdRUHzLyACZ3l5t8fYcvYQFPz53QNUnV3uM0Tg==", "profile"=>{"user_id"=>"1", "fullname"=>"bobadmin67", "dob"=>"2020-03-31", "address"=>"65 Millhouses lane", "citytown"=>"Derry", "country"=>"Ireland", "profilephoto"=>#<ActionDispatch::Http::UploadedFile:0x00007fe7a0b3cb28 @tempfile=#<Tempfile:/tmp/RackMultipart20200419-31370-1w6nscw.jpg>, @original_filename="profile1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[profilephoto]\"; filename=\"profile1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Profile"}
+Command :: file -b --mime '/tmp/639719a4d673a7a980c8b41b4960df5120200419-31370-roc176.jpg'
+Command :: file -b --mime '/tmp/639719a4d673a7a980c8b41b4960df5120200419-31370-16ya4hz.jpg'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[36mProfile Create (4.7ms)[0m  [1m[32mINSERT INTO `profiles` (`user_id`, `fullname`, `dob`, `address`, `citytown`, `country`, `profilephoto_file_name`, `profilephoto_content_type`, `profilephoto_file_size`, `profilephoto_updated_at`, `created_at`, `updated_at`) VALUES (1, 'bobadmin67', '2020-03-31', '65 Millhouses lane', 'Derry', 'Ireland', 'profile1.jpg', 'image/jpeg', 208491, '2020-04-19 04:08:56', '2020-04-19 04:08:56.784618', '2020-04-19 04:08:56.784618')[0m
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/profiles_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 7.3ms | Allocations: 9474)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"profiles"}, missing required keys: [:id]):
+  
+app/controllers/profiles_controller.rb:11:in `create'
+Started GET "/" for ::1 at 2020-04-19 05:09:49 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 575)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 8297)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:09:54 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.0ms | Allocations: 8638)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:11:41 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 414)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 9468)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:12:12 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 9453)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:12:30 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 411)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 9457)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:12:40 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms | Allocations: 9442)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:12:50 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms | Allocations: 9483)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:13:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"L/2vuR99zRokogV7KBJ2abIVfF7hkVm2SqbBoJeWQjmB6YKE4VYo2cU40UghJh9eJTGQeIS68r5v3vDn5hn08w==", "user_id"=>"bobadmin67", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` IS NULL LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 29.2ms | ActiveRecord: 13.6ms | Allocations: 12786)
+
+
+Started GET "/sessions" for ::1 at 2020-04-19 05:15:01 +0100
+Processing by SessionsController#index as HTML
+Completed 406 Not Acceptable in 4ms (ActiveRecord: 0.0ms | Allocations: 1998)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.2.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-04-19 05:15:08 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.7ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.7ms | ActiveRecord: 0.0ms | Allocations: 9647)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:15:26 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms | Allocations: 8586)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:15:32 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"FDAnIr2sdLHKNg/x0n4BYfiRSxDkrr4kxfn//VYwVNTmaQnPvWD+BXJzudKX4mZ2PXGZl6bg4HRGvuwLyXA0jQ==", "user_id"=>"bobadmin67", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` IS NULL LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 37.6ms | ActiveRecord: 12.2ms | Allocations: 10977)
+
+
+Started GET "/sessions" for ::1 at 2020-04-19 05:18:23 +0100
+Processing by SessionsController#index as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 2003)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.2.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-04-19 05:18:43 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms | Allocations: 9668)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:19:09 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 9619)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:19:21 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 411)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.0ms | Allocations: 8573)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:19:45 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"FAPJ4hM9c7A7SeDlEJPBVdWQ1uRGw+P6r61506g4tQfmWucPE/H5BIMMVsZVD6ZCEHAEYwSNvaos6molN3jVXg==", "user_id"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` IS NULL LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 46.8ms | ActiveRecord: 1.0ms | Allocations: 8520)
+
+
+Started GET "/sessions" for ::1 at 2020-04-19 05:20:28 +0100
+Processing by SessionsController#index as HTML
+Completed 406 Not Acceptable in 12ms (ActiveRecord: 0.0ms | Allocations: 2018)
+
+
+  
+ActionController::MissingExactTemplate (SessionsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.2.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:196:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.2.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-04-19 05:20:32 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 9622)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:20:39 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 411)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms | Allocations: 8614)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:20:48 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"U/c/UPW4xLrBXihQO6oxoj/fQ4++PeYO4DXeLFDdkBChrhG99XRODnkbnnN+Nla1+j+RCPxzuF5jcs3az53wSQ==", "user_id"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` IS NULL LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 46.7ms | ActiveRecord: 2.4ms | Allocations: 8559)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:24:16 +0100
+  [1m[35m (7.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 36.7ms | Allocations: 7722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 119ms (Views: 83.7ms | ActiveRecord: 0.0ms | Allocations: 17655)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:25:02 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 699)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms | Allocations: 9593)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:25:11 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 445)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 91.6ms | ActiveRecord: 0.0ms | Allocations: 8588)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:25:25 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xdmN4lcz/rXYH/xG3hnUxz13wj3P8iTatO0iYSxUCuWhTp8QThBKgh3OwzUgdbvARvz3JH2BqWUQfn2x6Xqrgw==", "username"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'bobadmin' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 717ms (ActiveRecord: 4.0ms | Allocations: 9378)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:25:25 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 572)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.3ms | Allocations: 8796)
+
+
+Started DELETE "/sessions/active" for ::1 at 2020-04-19 05:26:09 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"byK6BdBdgiMRISuvwDjdGmTaC+WsLsVXpEgHE8/u3eo5AeDHqiWnCqN/Hibz04yoTOx22upLWLtTZXFcDchaNA==", "id"=>"active"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 377)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:26:09 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 8058)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:27:48 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 705)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms | Allocations: 9616)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:27:51 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 411)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms | Allocations: 8589)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:28:01 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"YEPGp8UJZfagALTR2mxeGuE/wyNdTXhjqke3tHpOOasE1NRV3CrRwWXRi6IkADEdmrT2Ou8+9dwO1Ohkv2CYzQ==", "username"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'bobadmin' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 660ms (ActiveRecord: 0.1ms | Allocations: 982)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:28:01 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.2ms | Allocations: 8643)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:28:56 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 700)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.1ms | Allocations: 10195)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:29:44 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.1ms | Allocations: 10929)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"profiles"}, missing required keys: [:id]):
+    38:             <% if current_user %>
+    39:             <a class="dropdown-item" href="#"><%= link_to 'Logout', session_path('active'), method: :delete %></a>
+    40:             <a class="dropdown-item" href="#"><%= current_user.username %></a>
+    41:             <a class="dropdown-item" href="#"> <%= link_to "Profile", profile_path %> </a>
+    42:             <% else %>
+    43:             <a class="dropdown-item" href="#"><%= link_to 'Login', new_session_path, class: "active_nav_link" %></a>
+    44:             <% end %>
+  
+app/views/layouts/application.html.erb:41
+Started GET "/" for ::1 at 2020-04-19 05:30:04 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.5ms | Allocations: 8728)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"profiles"}, missing required keys: [:id]):
+    38:             <% if current_user %>
+    39:             <a class="dropdown-item" href="#"><%= link_to 'Logout', session_path('active'), method: :delete %></a>
+    40:             <a class="dropdown-item" href="#"><%= current_user.username %></a>
+    41:             <a class="dropdown-item" href="#"> <%= link_to "Profile", profile_path.id %> </a>
+    42:             <% else %>
+    43:             <a class="dropdown-item" href="#"><%= link_to 'Login', new_session_path, class: "active_nav_link" %></a>
+    44:             <% end %>
+  
+app/views/layouts/application.html.erb:41
+Started GET "/" for ::1 at 2020-04-19 05:32:22 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.3ms | Allocations: 10210)
+
+
+Started DELETE "/sessions/active" for ::1 at 2020-04-19 05:32:25 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gszCCEnzSBcbLdqq+axxlE9jAozKhdw/uNlFBBPM4q/U75jKM4ttPqlz7yPKRyAmZ1V/s4zgQdNP9DNL0eplcQ==", "id"=>"active"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:32:25 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms | Allocations: 8035)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:32:27 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.0ms | Allocations: 8590)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:32:40 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"JHKjIdE1h0ZnL+UW6VhtE36Nw5Xc7sJtNjpqtTI+x31A5bHTyBYzcaL+2mUXNAIUBQb2jG6dT9KSqTVl9xBmGw==", "username"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'bobadmin' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 674ms (ActiveRecord: 1.6ms | Allocations: 983)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:32:40 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.9ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.1ms | Allocations: 8648)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:33:05 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.2ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 71ms (Views: 70.7ms | ActiveRecord: 0.1ms | Allocations: 10151)
+
+
+Started DELETE "/sessions/active" for ::1 at 2020-04-19 05:33:08 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4nzL3UZKMWHDFekQq5Aq3NZzA7usFt9LzKHJrd5QzY20X5EfPDIUSHFL3JmYe3tu/kV+hOpzQqc7jL/iHHZKUw==", "id"=>"active"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 369)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:33:08 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.8ms | Allocations: 573)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms | Allocations: 8084)
+
+
+Started GET "/sessions/new" for ::1 at 2020-04-19 05:33:11 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 416)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.0ms | Allocations: 8596)
+
+
+Started POST "/sessions" for ::1 at 2020-04-19 05:33:17 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"buHyvetvJ9we8kY6Y17KBX7oM70vG7bq6hFpjXOEuJQKduBP8kyT69sjeUmdMqUCBWMGpJ1oO1VOgjZdtqoZ8g==", "username"=>"bobadmin", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`username` = 'bobadmin' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 671ms (ActiveRecord: 1.5ms | Allocations: 982)
+
+
+Started GET "/" for ::1 at 2020-04-19 05:33:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 572)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.8ms | Allocations: 8654)
+
+
+Started GET "/products" for ::1 at 2020-04-19 05:33:52 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.1ms | Allocations: 8779)
+
+

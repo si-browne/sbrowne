@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
     def create
         @profile=Profile.new(profile_params)
         if @profile.save
-            redirect_to profile_path, notice:
+            redirect_to root_path, notice:
             "Welcome #{@profile.fullname}, to your VerdictLabs profile."
         else
             redirect_to root_path, alert:
@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
     def update
         @profile=Profile.find(params[:id])
         if @profile.update(profile_params)
-            redirect_to @profile
+            redirect_to root_path
         else
             render 'edit'
         end

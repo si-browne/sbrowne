@@ -16,10 +16,7 @@
       </div>
       <div class="col-10 justify-content-center">
         <div>
-          <br/>
           <%= image_tag("header2.png", class: "img-fluid")%>
-          <br/>
-          <br/>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,13 +35,21 @@
                   </div>
                 </li>
               </ul>
-              <a class="dropdown-item" href="#"> <%= link_to "Register", new_user_path %> </a>
+            <% if current_user %>
+            <a class="dropdown-item" href="#"><%= link_to 'Logout', session_path('active'), method: :delete %></a>
+            <a class="dropdown-item" href="#"><%= current_user.username %></a>
+            <% else %>
+            <a class="dropdown-item" href="#"><%= link_to 'Login', new_session_path, class: "active_nav_link" %></a>
+            <a class="dropdown-item" href="#"> <%= link_to "Register", new_user_path %> </a>
+            <% end %>
+            
           </div>
         </nav>
         <div class="col-1 ">
         </div>
       </div>
     </div>
+    
     <%= yield %>
     <hr>
     <footer class="page-footer font-small blue pt-4">
