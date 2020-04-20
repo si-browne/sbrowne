@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1 ">
+        </div>
+        <div class="col-10 justify-content-center">
+            <div>
+            <hr>
+            <Marquee><h2>Search Product List - Enter exact values</h2></Marquee>
+            <hr>
+            <%= form_tag search_products_path, method: :get do %>
+
+                <%= text_field_tag :term, nil, placeholder: 'Search Products..', class:'form-control' %>
+                <br>
+                <%= submit_tag "Search", class:'btn btn-success' %> |
+                <a href="#"> <%= link_to "Clear Search Field", search_products_path %> </a> |
+                <a href="#"> <%= link_to "Return to Products", products_path %> </a>
+            <% end %>
+            <hr>
+            <table border="1" class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Brand/Manufacturer</th>
+                        <th scope="col">Average Cost</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col">Product Page</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @products.each do |product| %>
+                    <tr>
+                        <th><%= product.brand%></th>
+                        <th><%= product.avgcost%></th>
+                        <th><%= product.category%></th>
+                        <th><%= product.releasedate%></th>
+                        <th><%= link_to 'Show', product_path(product) %></th>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div class="col-1">
+        </div>
+    </div>
+</div>

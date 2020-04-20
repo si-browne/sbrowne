@@ -5,17 +5,23 @@
         <div class="col-10 justify-content-center">
             <div class="container-fluid text-center text-md-left">
                 <div class="row">
-                    <div class="col-md-12 mt-md-0 mt-3 text-center">
+                    <div class="col-md-3 mt-md-0 mt-3 text-center">
+                    <br>
+                    <%= image_tag(@review.user.userphoto.url, class: "img-fluid") %>
                     <br>
                     <br>
-                    <hr>
+                    <%= link_to "< Back to Reviews", reviews_path, class:'btn btn-success' %>
+                    </div>
+                    <div class="col-md-9 mt-md-0 mt-3 text-center">
+                    <br>
                     <p>Product: <%= @review.product.brand%></p> <br>
                     <p>Author: <%=  @review.author %></p><br>
                     <p>Rating: <%=  @review.rating %></p><br>
                     <p>Date: <%=  @review.date %></p><br>
                     <p>Review: <%=  @review.reviewcontent %></p>
-                    <%= link_to "< Back to Reviews", reviews_path, class:'btn btn-success' %>
+                    
                     </div>
+                    
                 </div>
             </div>
         </div>
